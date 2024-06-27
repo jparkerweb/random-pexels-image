@@ -1,8 +1,7 @@
 {
   "name": "random-pexels-image",
   "version": "1.0.0",
-  "description": "Simple Node.js application that provides an endpoint to search Pexels and return a randomly selected image. It allows hotlinking images by directly returning the image data.
-",
+  "description": "Simple Node.js application that provides an endpoint to search Pexels and return a randomly selected image. It allows hotlinking images by directly returning the image data.",
   "main": "index.js",
   "type": "module",
   "scripts": {
