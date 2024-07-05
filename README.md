@@ -15,7 +15,7 @@ This API is designed to fetch images from the Pexels API based on specified quer
 
 1. Clone the repository
     ```bash
-    git clone https://github.com/your-username/pexels-image-search-api.git
+    git clone https://github.com/jparkerweb/pexels-image-search-api.git
     cd pexels-image-search-api
     ```
 
