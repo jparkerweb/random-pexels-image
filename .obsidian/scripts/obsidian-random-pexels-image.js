@@ -16,7 +16,20 @@ const fetchImage = async () => {
         if (data.photos && data.photos.length > 0) {
             const randomIndex = Math.floor(Math.random() * data.photos.length);
             const imageUrl = data.photos[randomIndex].src.original;
-            dv.el("div", null, { cls: "custom-banner-image", attr: { style: `background-image:url('${imageUrl}');` } });
+
+            // Create the div element but keep it hidden
+            const div = dv.el("div", null, {
+                cls: "custom-banner-image",
+                attr: { style: `background-image:url('${imageUrl}'); display:none;` }
+            });
+
+            // Wait for the image to load
+            const img = new Image();
+            img.src = imageUrl;
+            img.onload = () => {
+                // Show the div once the image is loaded
+                div.style.display = 'block';
+            };
         } else {
             dv.el("div", "No images found", { cls: "custom-banner-image" });
         }
