@@ -52,20 +52,3 @@ http://localhost:8000/search-image?size=medium&keyword=beach&orientation=landsca
 http://localhost:8000/search-image?keyword=bugs
 http://localhost:8000/search-image
 ```
-
----
-
-## 💎 Obsidian Script
-An additional specific use case is for using a random image to be used as a souce for the `Custom Background Image` script in Obsidian:
-- Custom Background Image script: [here](https://github.com/jparkerweb/obsidian-custom-banner-image)
-- Script to generate the field used by Custom Background Image: [here](https://github.com/jparkerweb/random-pexels-image/blob/master/.obsidian/scripts/obsidian-random-pexels-image.js)
-
-### Usage
-- make sure you have `dataviewjs` plugin installed in Obsidian
-- place both scripts in a scripts folder in your Obsidian vault (I use a folder called `= scripts`)
-- reference the [Custom Background Image github docs](https://github.com/jparkerweb/obsidian-custom-banner-image) to ensure you are including the correct `frontmatter` in your note
-- gather your [pexels.com](https://www.pexels.com/) API key (its free to signup and use)
-- update the `obsidian-random-pexels-image.js` file with your API key (you will see a variable called `apiKeyToUse` in the top of the file
-- call the pexels script in your note right after your frontmatter
-  - example: `$= await dv.view("= scripts/obsidian-random-pexels-image", "<keyword or two to search images with here>")`
-
